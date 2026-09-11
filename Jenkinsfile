@@ -20,6 +20,12 @@ pipeline {
                 echo 'Tool: SonarQube'
             }
         }
+        stage('Security Scan') {
+            steps {
+                  echo 'Task: Scan the code for vulnerabilities'
+                  echo 'Tool: Snyk'
+    }
+}
          stage('Deploy to Staging') {
             steps {
                 echo 'Task: Deploy the application to the staging environment'
